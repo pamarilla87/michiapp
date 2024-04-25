@@ -11,10 +11,12 @@ function AdminLoginPage() {
     const [error, setError] = useState('');
     const navigate = useNavigate();
     const { login } = useAuth();  // Get login function from context
+    console.log(process.env.REACT_APP_API_URL);
+
 
     const handleLogin = async () => {
         try {
-            const response = await axios.post('http://localhost:5000/api/auth/login', { username, password });
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/auth/login`, { username, password });
             if (response.data.message === 'Logged in successfully') {
                 login(response.data.token);
                 navigate('/dashboard');

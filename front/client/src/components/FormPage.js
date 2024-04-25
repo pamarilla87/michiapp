@@ -47,7 +47,7 @@ function FormPage() {
         }
 
         try {
-            const response = await axios.post('http://localhost:5000/api/form/submit-form', formData);
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/form/submit-form`, formData);
             // Pass the unique ID to the confirmation page via navigate state
             navigate('/confirmation', { state: { id: response.data.id } });
         } catch (error) {

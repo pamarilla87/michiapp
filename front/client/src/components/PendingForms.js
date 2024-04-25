@@ -9,7 +9,7 @@ function PendingForms() {
 
     const fetchPendingForms = useCallback(async () => {
         try {
-            const response = await fetch('http://localhost:5000/api/form/query-by-status?estado=0');
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/form/query-by-status?estado=0`);
             if (response.ok) {
                 const forms = await response.json();
                 const formattedForms = forms.map(form => ({

@@ -15,7 +15,7 @@ function FormDetails() {
         const fetchFormDetails = async () => {
             setIsLoading(true);
             try {
-                const response = await fetch(`http://localhost:5000/api/form/form-details/${id}`);
+                const response = await fetch(`${process.env.REACT_APP_API_URL}/form/form-details/${id}`);
                 if (!response.ok) throw new Error('Network response was not ok');
                 const data = await response.json();
                 const additionalResults = calculateAdditionalData(data);
