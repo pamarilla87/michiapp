@@ -13,6 +13,9 @@ server/node_modules
 
 # production
 /build
+/front/build
+/front/client/build
+front/client/build/
 
 # misc
 .DS_Store
@@ -20,6 +23,11 @@ server/node_modules
 .env.development.local
 .env.test.local
 server/.env
+.env
+front/client/.env
+front/.env
+/front/.env
+/front/client/.env
 .env.production.local
 
 npm-debug.log*

@@ -52,6 +52,10 @@ function UserDashboard() {
         fetchPendingCount();
     };
 
+    const handleViewCalendar = () => {
+        navigate('/my-calendar'); // Assumes you have a route named '/my-calendar'
+    };
+
     return (
         <div className="success-container">
             <div className="success-card">
@@ -60,8 +64,9 @@ function UserDashboard() {
                 <button className="success-button" onClick={handleViewPending}>
                     Solicitudes pendientes ({pendingCount})
                 </button>
-                <button className="success-button" onClick={handleRefreshPending}>Refresh Count</button>
-                <button className="success-button" onClick={handleLogout}>Logout</button>
+                <button className="success-button" onClick={handleRefreshPending}>Refrescar Solicitudes</button>
+                <button className="success-button" onClick={handleViewCalendar}>Mi Calendario</button>
+                <button className="success-button" onClick={handleLogout}>Salir</button>
             </div>
         </div>
     );
