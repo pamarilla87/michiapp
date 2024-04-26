@@ -11,6 +11,7 @@ import ProtectedRoute from './components/ProtectedRoute.js';
 import NotFoundPage from './components/NotFoundPage.js';
 import FormDetails from './components/FormDetails.js';
 import EditForm from './components/EditForm.js';
+import MyCalendar from './components/MyCalendar.js';
 
 function App() {
     return (
@@ -40,6 +41,11 @@ function App() {
                     <Route path="/edit-form/:id" element={
                         <ProtectedRoute>
                             <EditForm />
+                        </ProtectedRoute>
+                    } />
+                    <Route path="/my-calendar" element={
+                        <ProtectedRoute>
+                            <MyCalendar />
                         </ProtectedRoute>
                     } />
                 </Routes>
