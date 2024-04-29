@@ -56,6 +56,10 @@ function UserDashboard() {
         navigate('/my-calendar'); // Assumes you have a route named '/my-calendar'
     };
 
+    const handleViewProfile = () => {
+        navigate('/my-profile'); // Assumes you have a route named '/my-calendar'
+    };
+
     return (
         <div className="success-container">
             <div className="success-card">
@@ -66,6 +70,7 @@ function UserDashboard() {
                 </button>
                 <button className="success-button" onClick={handleRefreshPending}>Refrescar Solicitudes</button>
                 <button className="success-button" onClick={handleViewCalendar}>Mi Calendario</button>
+                <button className="success-button" onClick={handleViewProfile}>Mi Perfil</button>
                 <button className="success-button" onClick={handleLogout}>Salir</button>
             </div>
         </div>

@@ -1,0 +1,52 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height to enable vertical centering */
+}
+
+.user-profile-form {
+    max-width: 1024px;
+    padding: 20px;
+    background-color: #f0f4f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between form elements */
+    width: 50%; /* Adjust the width of the form if necessary */
+}
+
+.user-profile-form input {
+    padding: 10px;
+    border: 2px solid #ddd; /* Light grey border */
+    border-radius: 5px;
+    width: 50%; /* Reducing the width to half of the form */
+    margin-bottom: 10px; /* Space below each input */
+    margin-left: auto; /* Centering the input field */
+    margin-right: auto; /* Centering the input field */
+}
+
+.user-profile-button-group {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 10px; /* Space between buttons */
+    width: 60%; /* Adjusting the width to not take the full width */
+    margin-left: auto; /* Centering the button group */
+    margin-right: auto; /* Centering the button group */
+}
+
+.user-profile-form button {
+    flex: 1; /* Each button takes equal space */
+    padding: 10px 20px;
+    background-color: #ff94c2; /* Pastel pink */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.user-profile-form button:hover {
+    background-color: #ec729b; /* A slightly darker pink for hover effect */
+}

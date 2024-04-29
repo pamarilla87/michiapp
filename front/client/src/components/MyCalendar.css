@@ -1,103 +1,81 @@
-/* MyCalendar.css */
-
-.calendar-container {
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center-align the items horizontally */
-    padding: 20px;
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
+/* Calendar Container Style */
+.rbc-calendar {
+    max-width: 1024px; /* Match your form's max width */
+    margin: 20px auto; /* Center the calendar on the page */
+    border-radius: 10px; /* Match your form's border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Match your form's box shadow */
+    overflow: hidden; /* Ensures no overflow */
     background-color: #f0f4f7; /* Consistent light pastel blue background */
-    overflow-y: auto; /* Enables vertical scrolling if content overflows */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
-    margin: 20px; /* Margin around the container to separate from other content */
 }
 
-.calendar-display {
-    display: flex;
-    justify-content: center; /* Center-align the calendar horizontally */
-    width: 100%; /* Ensures the calendar respects the parent width */
-    max-width: 600px; /* Maximum width to prevent overstretching */
-    /*background-color: white;*/        
-    padding: 20px; /* Padding inside the calendar */
-    border-radius: 10px; /* Consistent with the container border radius */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05); /* Lighter shadow for inner content */
-    align-items: center; /* Align items vertically in the center */
-    flex-direction: column; /* Stack child elements vertically */
-}
-
-/* Styling for the react-calendar component specifically */
-.react-calendar {
-    width: 100%; /* Ensures the calendar fills the calendar-display container */
-    border: none; /* Removes default border */
-}
-
-.react-calendar__navigation {
-    display: flex; /* Ensure the navigation bar is using flexbox */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    background-color: #ff94c2; /* Pastel pink for header */
-    color: white; /* White text for contrast */
-    margin-bottom: 10px; /* Space below the navigation bar */
-    padding: 10px 0; /* Padding to increase the height of the navigation bar */
-}
-
-.react-calendar__navigation button {
-    min-width: 44px;
-    background: none; /* Transparent background for buttons */
-    color: white; /* White text to stand out */
-    font-size: 16px; /* Legible font size */
-    margin: 0 20px; /* Add margin to ensure spacing around the buttons */
-}
-
-.react-calendar__month-view__days__day--weekend {
-    color: #d10056; /* A standout color for weekend days */
-    font-size: 0.9em; /* Consistent font size for days */
-
-}
-
-.react-calendar__tile {
-    padding: 10px;
-    border-radius: 5px; /* Rounded corners for each date tile */
-    color: #333; /* Dark color for date text for better visibility */
-}
-
-.react-calendar__tile--active,
-.react-calendar__tile--hasActive {
-    background-color: #ec729b; /* A slightly darker pink for the selected day */
-    color: white; /* White text for contrast */
-}
-
-.react-calendar__tile:hover {
-    background-color: #f0f0f0; /* Light grey for hover effect */
-    color: #333; /* Ensuring text is visible on hover */
-}
-
-.react-calendar__tile--now {
-    background-color: #ffdede; /* Light red for the current day */
-    color: #333; /* Dark text for better visibility */
-}
-
-/* Additional Reset for Calendar Elements */
-.react-calendar,
-.react-calendar *,
-.react-calendar *:before,
-.react-calendar *:after {
-    box-sizing: border-box; /* Ensures padding and borders don't affect width */
-}
-
-/* Additional Styling for Navigation */
-.react-calendar__navigation button:enabled:hover,
-.react-calendar__navigation button:enabled:focus {
-    background-color: #ff94c2; /* Lighter pink for hover/focus on buttons */
+/* Calendar Header */
+.rbc-toolbar {
+    background-color: #ff94c2; /* Pastel pink */
     color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-/* Ensure all text is visible and adjusts to theme */
-.react-calendar__month-view__weekdays {
-    font-size: 0.85em; /* Slightly smaller font size for weekday headers */
-    color: #333;
-    background-color: #f0f4f7; /* To match the calendar container background */
+.rbc-toolbar button {
+    color: white;
+    background: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.rbc-toolbar button:hover {
+    background-color: #ec729b; /* A slightly darker pink for hover effect */
+}
+
+/* Month/Week/Day View Rows and Cells */
+.rbc-month-view, .rbc-time-view, .rbc-day-view {
+    background-color: white;
+}
+
+.rbc-day-bg {
+    background-color: #f2f2f2; /* Alternate row color for readability */
+}
+
+.rbc-today {
+    background-color: #ddd; /* Highlight today with a different color */
+}
+
+.rbc-event {
+    background-color: #ff94c2; /* Pastel pink for events */
+    color: white;
+    border-radius: 5px; /* Rounded corners for events */
+    padding: 4px 8px; /* Padding inside events for better readability */
+    border: none;
+}
+
+.rbc-event:hover {
+    background-color: #ec729b; /* A darker shade of pink for hover effect */
+}
+
+.button-container {
+    text-align: center; /* Center-align the button */
+    margin-top: 10px; /* Space above the button */
+}
+
+.volver-button {
+    padding: 10px 20px;
+    background-color: #ff94c2; /* Pastel pink */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block; /* Allows the button to be centered using text-align on parent */
+}
+
+.volver-button:hover {
+    background-color: #ec729b; /* A slightly darker pink for hover effect */
 }

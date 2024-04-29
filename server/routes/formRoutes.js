@@ -78,7 +78,8 @@ router.post('/submit-form', async (req, res) => {
         const newForm = new Form({
             ...req.body,
             presupuestoNumero: `PRES-${presupuestoNumero}`,
-            estado: 0 //0: nuevo, 1: pendiente, 2: confirmado, 3: rechazado
+            estado: 0, //0: nuevo, 1: pendiente, 2: confirmado, 3: rechazado
+            catsitter: ''
         });
         await newForm.save();
         console.log("Form saved successfully, Presupuesto Numero:", `PRES-${presupuestoNumero}`);

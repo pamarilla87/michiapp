@@ -12,6 +12,7 @@ import NotFoundPage from './components/NotFoundPage.js';
 import FormDetails from './components/FormDetails.js';
 import EditForm from './components/EditForm.js';
 import MyCalendar from './components/MyCalendar.js';
+import UserProfile from './components/UserProfile.js';
 
 function App() {
     return (
@@ -34,7 +35,7 @@ function App() {
                     } />
                     <Route path="/form-details/:id" element={
                         <ProtectedRoute>
-                                <FormDetails />
+                            <FormDetails />
                         </ProtectedRoute>
                     } />
                     <Route path="*" element={<NotFoundPage />} />
@@ -46,6 +47,11 @@ function App() {
                     <Route path="/my-calendar" element={
                         <ProtectedRoute>
                             <MyCalendar />
+                        </ProtectedRoute>
+                    } />
+                    <Route path="/my-profile" element={
+                        <ProtectedRoute>
+                            <UserProfile />
                         </ProtectedRoute>
                     } />
                 </Routes>

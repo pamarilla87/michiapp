@@ -19,6 +19,7 @@ connectDB();
 
 app.use('/api/form', formRoutes); 
 app.use('/api/auth', authRoutes);
+app.use('/api/events', authRoutes);
 
 app.listen(port, host, () => {
     console.log(`Server running on port ${port}`);
